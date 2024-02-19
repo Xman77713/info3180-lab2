@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container-fluid pt-5 pb-5" id="profile-green">
+    <img src="{{ url_for('static', filename='me.jpg') }}" class="profile-photo">
+    <h1>Pierre Mannix</h1>
+    <h5>@pierremannix</h5>
+    <h5>Kingston, Jamaica</h5>
+    <h5>{{ datejoined }}</h5>
+</div>
+<div class="container-fluid" id="profile-white">
+    <p id="profile-bio">
+        Hi, I'm Pierre. I'm a third year Comp Sci student, ready to venture into the world of Computing next year in my Master's Degree. I play the piano, compose, draw pixel art, and I am currently learning how to make games.
+    </p>
+    <div id="profile-nums-text">
+        <div class="num-then-text">
+            <p class="profile-num">1</p>
+            <p class="profile-text">Posts</p>
+        </div>
+        <div class="num-then-text">
+            <p class="profile-num">2</p>
+            <p class="profile-text">Following</p>
+        </div>
+        <div class="num-then-text">
+            <p class="profile-num">3</p>
+            <p class="profile-text">Followers</p>
+        </div>
+    </div>
+    <button id="follow-btn">
+        Follow
+    </button>
+</div>
+{% endblock %}
